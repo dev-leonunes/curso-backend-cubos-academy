@@ -1,5 +1,5 @@
-const stringCorrompida = ""
-let dadoPurificado = '*Canis %lupus )familiaris';
+const stringCorrompida = "*Canis %lupus )familiaris"
+let dadoPurificado = '';
 for (let i of stringCorrompida) {
     if (i === "!" || i === "@" || i === "#" || i === "$" || i === "%" || i === "&" || i === "*" || i === "(" || i === ")") {
     } else {
