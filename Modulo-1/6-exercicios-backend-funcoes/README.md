@@ -1,14 +1,13 @@
 ![](https://i.imgur.com/xG74tOh.png)
 
-# Back-end | Métodos de Arrays III
+# Back-end | Funções
 
 ## Exercícios
 
-1. Lista de exercícios de Ordenação
-2. Filtrar maior string
-3. Filtrar maior número
-
----
+1.  Sistema de correção de provas
+2.  Carro
+3.  Carrinho de um e-commerce
+4.  Sistema de transações bancárias
 
 Preencha a checklist para fazer os exercícios:
 
@@ -17,4 +16,4 @@ Preencha a checklist para fazer os exercícios:
 -   [x] Após fazer e commitar todos os exercícios fazer o `git push` para seu fork
 -   [x] Copiar a url do seu fork e enviar na plataforma
 
-###### tags: `módulo 2` `exercícios` `lógica` `nodeJS`
+###### tags: `módulo 1` `exercício de classe` `lógica` `matemática` `nodeJS` `funções` `objetos` `métodos`
