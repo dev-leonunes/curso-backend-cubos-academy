@@ -4,7 +4,11 @@ const {
     filtrarCarros
 } = require('./controladores/carros')
 
+const { validarSenha } = require('./intermediario')
+
 const app = express()
+
+app.use(validarSenha)
 
 app.get('/carros', filtrarCarros)
 
