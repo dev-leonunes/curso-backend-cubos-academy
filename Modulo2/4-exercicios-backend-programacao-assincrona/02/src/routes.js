@@ -1,11 +1,12 @@
 const express = require('express')
 const {
-} = require('./controller/frete')
+    listaDePokemons,
+    detalhesDePokemons
+} = require('./controllers/pokemons')
 
 const routes = express();
 
-routes.get('/pokemon',);
-routes.get('/pokemon/:id',);
-routes.get('/pokemon/:pokemon',);
+routes.get('/pokemon', listaDePokemons);
+routes.get('/pokemon/:pokemon', detalhesDePokemons);
 
 module.exports = routes;
