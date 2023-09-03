@@ -1,5 +1,5 @@
 # Desenvolvimento de Software Back-end
-Este repositório contém atividades e projetos que refletem o meu aprendizado e crescimento ao longo do curso de Desenvolvimento de Software com foco em Back-end na Cubos Academy.
+Este repositório contém atividades e projetos que refletem o meu aprendizado e crescimento ao longo do módulo 1 do curso de Desenvolvimento de Software com foco em Back-end na Cubos Academy.
 
 ## O Curso
 O curso tem duração de 05 meses (540 horas) e é composto por aulas de Back-end, lógica de programação e soft skills. É ministrado por professores especialistas, com expertise nos projetos desenvolvidos pela Cubos Tecnologia.
