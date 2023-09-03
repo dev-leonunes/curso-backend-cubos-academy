@@ -12,13 +12,13 @@ Durante o curso, os alunos adquirem diversas competências na área de Desenvolv
 - Experiência com projeção de banco de dados utilizando PostgreSQL e SQL;
 - Utilização de Git e Git Hub para controle de versão;
 - Trabalho com metodologias ágeis;
-- Desenvolvimento de habilidades interpessoais e SoftSkills.
+- Desenvolvimento de habilidades interpessoais e SoftSkills.<br><br>
 
-#### ![Módulo1](https://github.com/futuroDevLeo/m01-nodejs-cubos-academy)
+### Encontre o Módulo 1 aqui >>> [Módulo1](https://github.com/futuroDevLeo/m01-nodejs-cubos-academy)<br><br>
 
 ## Módulo 2
 ### Tecnológias e Ferramentas
-<img src="https://skillicons.dev/icons?i=js,nodejs,git,express" /> <img src="https://www.vectorlogo.zone/util/preview.html?image=/logos/npmjs/npmjs-tile.svg" alt="npm" width="40" height="40" /><br>
+<img src="https://skillicons.dev/icons?i=js,nodejs,git,express" /> <img src="https://www.vectorlogo.zone/logos/npmjs/npmjs-tile.svg" alt="npm" width="45" height="45"/><br>
 <img src="https://skillicons.dev/icons?i=vscode,github" />
 
 ### SoftSkills
