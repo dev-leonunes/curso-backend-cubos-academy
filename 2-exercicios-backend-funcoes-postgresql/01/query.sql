@@ -1,4 +1,3 @@
-
 -- 1
 select * from farmacia;
 
