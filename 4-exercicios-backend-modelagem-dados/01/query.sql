@@ -94,8 +94,7 @@ values
 ('28007155023', 'Carlos Eduardo');
 
 
--- 5
--- a
+-- 5(a)
 insert into pedidos
 (cliente_cpf, vendedor_cpf, valor)
 values
@@ -115,3 +114,41 @@ update produtos set quantidade_em_estoque = quantidade_em_estoque - 1 where id =
 update produtos set quantidade_em_estoque = quantidade_em_estoque - 6 where id = 11;
 update produtos set quantidade_em_estoque = quantidade_em_estoque - 1 where id = 15;
 update produtos set quantidade_em_estoque = quantidade_em_estoque - 5 where id = 2;
+
+-- 5(b)
+insert into pedidos
+(cliente_cpf, vendedor_cpf, valor)
+values
+('63193310034', '23262546003', ((2*198)+(3*420)+(5*300)+(10*125)+(2*235)));
+ 
+insert into itens_do_pedido
+(pedido_id, quantidade, produto_id)
+values
+(2, 10, 17),
+(2, 3, 18),
+(2, 5, 1),
+(2, 10, 5),
+(2, 2, 6);
+    
+update produtos set quantidade_em_estoque = quantidade_em_estoque - 10 where id = 17;
+update produtos set quantidade_em_estoque = quantidade_em_estoque - 3 where id = 18;
+update produtos set quantidade_em_estoque = quantidade_em_estoque - 5 where id = 1;
+update produtos set quantidade_em_estoque = quantidade_em_estoque - 10 where id = 5;
+update produtos set quantidade_em_estoque = quantidade_em_estoque - 2 where id = 6;
+
+-- 5(c)
+insert into pedidos
+(cliente_cpf, vendedor_cpf, valor)
+values
+('75670505018', '23262546003', ((2350)+(6*130)+(5*198)));
+
+insert into itens_do_pedido
+(pedido_id, quantidade, produto_id)
+values
+(3, 1, 13),
+(3, 6, 12),
+(3, 5, 17);
+
+update produtos set quantidade_em_estoque = quantidade_em_estoque - 1 where id = 13;
+update produtos set quantidade_em_estoque = quantidade_em_estoque - 6 where id = 12;
+update produtos set quantidade_em_estoque = quantidade_em_estoque - 5 where id = 17;
