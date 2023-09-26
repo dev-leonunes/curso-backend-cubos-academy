@@ -1,12 +1,16 @@
 const express = require('express');
 const {
-    criarAutor,
-    listarAutor
+    postAuthor,
+    postBook,
+    getAuthor,
+    getBooks
 } = require('./controller/biblioteca');
 
 const routes = express();
 
-routes.post('/autor', criarAutor);
-routes.get('/autor/:id', listarAutor);
+routes.post('/autor', postAuthor);
+routes.get('/autor/:id', getAuthor);
+routes.post('/autor/:id/livros', postBook);
+routes.get('/livros', getBooks);
 
 module.exports = routes;
