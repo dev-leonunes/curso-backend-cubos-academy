@@ -35,7 +35,7 @@ const loginUser = async (req, res) => {
     const { email, senha } = req.body;
 
     if (!email || !senha) {
-        return res.status(400).json({ mensagem: '' });
+        return res.status(400).json({ mensagem: 'Os campos email e senha são obrigatórios' });
     }
 
 
