@@ -1,1 +1,1 @@
-module.exports = 'UmaSenhaSegunda';
+module.exports = process.env.JWT_SECRET_KEY;
