@@ -8,7 +8,7 @@ O curso tem duração de 05 meses (540 horas) e é composto por aulas de Back-en
 Durante o curso, os alunos adquirem diversas competências na área de Desenvolvimento Back-end, incluindo:
 
 - Desenvolvimento Back-end com JavaScript e Node.js, utilizando pacotes npm;
-- Criação de APIs Rest;
+- **Criação de APIs Rest;**
 - Experiência com projeção de banco de dados utilizando PostgreSQL e SQL;
 - Utilização de Git e Git Hub para controle de versão;
 - Trabalho com metodologias ágeis;
