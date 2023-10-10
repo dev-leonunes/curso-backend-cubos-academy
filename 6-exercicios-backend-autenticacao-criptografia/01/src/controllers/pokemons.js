@@ -16,7 +16,8 @@ const registerPokemon = async (req, res) => {
 
         return res.status(201).json(rows[0]);
     } catch (error) {
-        return res.status(500).json(error);
+        console.log(error);
+        return res.status(500).json({ mensagem: 'Erro interno do servidor' });
     }
 };
 
@@ -30,14 +31,24 @@ const pokemonAliasUpdate = async (req, res) => {
     }
 
     try {
-        const { rows } = await pool.query(
+        const { rowCount } = await pool.query(
+            'select * from pokemons where id = $1 and usuario_id = $2',
+            [pokemon_id, usuario_id]
+        );
+
+        if (rowCount < 1) {
+            return res.status(404).json({ mensagem: 'Pokemon não encontrado' })
+        }
+
+        await pool.query(
             'update pokemons set apelido = $1 where pokemons.usuario_id = $2 and pokemons.id = $3 returning *',
             [apelido, usuario_id, pokemon_id]
         );
 
-        return res.status(200).json(rows[0]);
+        return res.status(204).send();
     } catch (error) {
-        return res.status(500).json(error);
+        console.log(error);
+        return res.status(500).json({ mensagem: 'Erro interno do servidor' });
     }
 };
 
@@ -59,7 +70,8 @@ const listPokemons = async (req, res) => {
 
         return res.status(200).json(list);
     } catch (error) {
-        return res.status(500).json(error);
+        console.log(error);
+        return res.status(500).json({ mensagem: 'Erro interno do servidor' });
     }
 };
 
@@ -94,11 +106,12 @@ const listPokemonById = async (req, res) => {
 
 const deletePokemon = async (req, res) => {
     const { id } = req.params;
+    const { id: usuario_id } = req.user;
 
     try {
-        const { rows, rowCount } = await pool.query(
-            'delete from pokemons where pokemons.id = $1 returning *',
-            [id]
+        const { rowCount } = await pool.query(
+            'delete from pokemons where pokemons.id = $1 and pokemons.usuario_id = $2 returning *',
+            [id, usuario_id]
         );
 
         if (rowCount < 1) {

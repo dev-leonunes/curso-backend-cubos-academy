@@ -20,14 +20,15 @@ const createNewUser = async (req, res) => {
         const senhaHash = await bcrypt.hash(senha, 10);
 
         const newUser = await pool.query(
-            'insert into usuarios (nome, email, senha) values ($1, $2, $3) returning *',
+            'insert into usuarios (nome, email, senha) values ($1, $2, $3) returning id, nome, email',
             [nome, email, senhaHash]
         );
 
         return res.status(201).json(newUser.rows[0]);
 
     } catch (error) {
-        return res.status(500).json(error.mensagem)
+        console.log(error);
+        return res.status(500).json({ mensagem: 'Erro interno do servidor' });
     }
 };
 
@@ -37,7 +38,6 @@ const loginUser = async (req, res) => {
     if (!email || !senha) {
         return res.status(400).json({ mensagem: 'Os campos email e senha são obrigatórios' });
     }
-
 
     try {
         const user = await pool.query(
