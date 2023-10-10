@@ -1,5 +1,5 @@
 -- 1
-select * from farmacia;
+select count(*) from farmacia;
 
 -- 2
 select min(idade) from usuarios;
@@ -11,7 +11,7 @@ select max(idade) from usuarios;
 select avg(idade) from usuarios where idade >= 18;
 
 -- 5
-select sum(estoque) as somatotalestoque from farmacia where categoria = 'blue' or categoria = 'black';
+select categoria, sum(estoque) as somatotalestoque from farmacia where categoria = 'blue' or categoria = 'black' group by categoria;
 
 -- 6
 select categoria, sum(estoque) from farmacia where categoria is not null group by categoria;
@@ -20,7 +20,7 @@ select categoria, sum(estoque) from farmacia where categoria is not null group b
 select categoria, sum(estoque) from farmacia where categoria is null group by categoria;
 
 -- 8
-select estoque from farmacia where categoria is null;
+select count(*) from farmacia where categoria is null;
 
 -- 9
 select concat(medicamento, ' (', categoria, ')') from farmacia where categoria is not null;
