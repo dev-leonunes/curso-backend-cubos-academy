@@ -23,7 +23,8 @@ Durante o curso, os alunos adquirem diversas competências na área de Desenvolv
 <img src="https://skillicons.dev/icons?i=vscode,github,postman" />
 
 ### SoftSkills
-- Carreira dev;
-- Metodologias ágeis (Scrum, Kanban);
-- Github;
-- Ansiedade e Autossabotagem.
+- Inteligência Emocional;
+- Gestão de Tempo;
+- Como dar e receber feedbacks;
+- Ética em Tecnologia;
+- Git e Fluxo de Trabalho em Equipe.
