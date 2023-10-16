@@ -1,5 +1,4 @@
-const { knex } = require('../conexao');
-const conexao = require('../conexao');
+const knex = require('../conexao');
 const bcrypt = require('bcrypt');
 
 const cadastrarUsuario = async (req, res) => {
@@ -63,25 +62,26 @@ const atualizarPerfil = async (req, res) => {
     }
 
     try {
+        const usuarioEncontrado = await knex('usuarios').where({ email }).first();
         if (email !== req.usuario.email) {
-            const quantidadeUsuarios = await knex('usuarios').where({ email });
-
-            if (quantidadeUsuarios.length > 0) {
+            if (usuarioEncontrado.length > 0) {
                 return res.status(400).json("O email já existe");
             }
         }
 
-        const usuario = await knex('usuarios').update({ nome, email, senha, nome_loja }).where({ id: req.usuario.id }).returning('*');
+        const senhaCriptografada = await bcrypt.hash(senha, 10);
+
+        const usuario = await knex('usuarios')
+            .update({ nome, email, senha: senhaCriptografada, nome_loja })
+            .where({ id: req.usuario.id })
+            .returning('*');
 
         if (usuario.length === 0) {
             return res.status(400).json("O usuario não foi atualizado");
         }
 
-        const { senha: _, ...usuarioAtualizado } = usuario[0];
-
-        return res.status(200).json(usuarioAtualizado);
+        return res.status(200).json("Usuario atualizado com sucesso!");
     } catch (error) {
-        console.log(error);
         return res.status(400).json(error.message);
     }
 }

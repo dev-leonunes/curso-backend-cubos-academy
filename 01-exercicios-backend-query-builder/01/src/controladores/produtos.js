@@ -1,4 +1,4 @@
-const conexao = require('../conexao');
+const knex = require('../conexao');
 
 const listarProdutos = async (req, res) => {
     const { usuario } = req;

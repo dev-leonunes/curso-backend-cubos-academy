@@ -9,11 +9,4 @@ const knex = require('knex')({
     }
 });
 
-const query = (text, param) => {
-    return pool.query(text, param);
-}
-
-module.exports = {
-    query,
-    knex
-}
+module.exports = knex;
