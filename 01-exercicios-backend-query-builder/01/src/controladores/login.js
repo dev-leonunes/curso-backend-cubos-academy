@@ -13,7 +13,7 @@ const login = async (req, res) => {
     try {
         const usuario = await knex('usuarios').where({ email }).first();
 
-        if (usuario.lenght === 0) {
+        if (usuario.length === 0) {
             return res.status(400).json("O usuario não foi encontrado");
         }
 
