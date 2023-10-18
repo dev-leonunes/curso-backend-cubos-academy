@@ -51,7 +51,8 @@ const cadastrarUsuario = async (req, res) => {
 };
 
 const obterPerfil = async (req, res) => {
-    return res.status(200).json(req.usuario);
+    const { senha: _, ...usuarioLogado } = req.usuario
+    return res.status(200).json(usuarioLogado);
 };
 
 const atualizarPerfil = async (req, res) => {
