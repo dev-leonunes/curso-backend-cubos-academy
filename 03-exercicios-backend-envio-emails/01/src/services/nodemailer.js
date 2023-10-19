@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-const { promises } = require('nodemailer/lib/xoauth2');
 
 const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
@@ -15,7 +14,7 @@ const send = (to, subject, body) => {
         from: process.env.MAIL_FROM,
         to,
         subject,
-        text: body
+        html: body
     })
 }
 
