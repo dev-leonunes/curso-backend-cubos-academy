@@ -14,7 +14,7 @@ Lembrando que o banco de dados precisa ser configurado e suas credenciais precis
 
 ## Deploy
 
-O deploy do banco de dados foi feito na plataforma **ElephantSQL** e a aplicação na plataforma **cyclic.sh**.
+O deploy do banco de dados foi feito na plataforma `ElephantSQL` e a aplicação na plataforma `cyclic.sh`.
 
 Url do deploy: https://vivacious-red-kilt.cyclic.cloud
 
