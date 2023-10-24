@@ -1,20 +1,22 @@
 const { Router } = require('express');
 
 const userController = require('../controllers/userController');
-const authMiddleware = require('../middleware/authMiddlewares');
+const authMiddleware = require('../middlewares/authMiddlewares');
 
-const { validationCreateNewUser, validationUpdateUser } = require('../middleware/userMiddlewares');
+// const { validationCreateNewUser, validationUpdateUser } = require('../middlewares/userMiddlewares');
+const { validationMiddleware } = require('../middlewares/validationMiddleware');
+const schemaUsers = require('../validations/userSchema');
 
 const userRouter = Router();
 
 userRouter.post('/usuario',
-    validationCreateNewUser,
+    validationMiddleware(schemaUsers),
     userController.createNewUser
 );
 
 userRouter.put("/usuario",
     authMiddleware.verifyLoggedUser,
-    validationUpdateUser,
+    validationMiddleware(schemaUsers),
     userController.userUpdate
 );
 
