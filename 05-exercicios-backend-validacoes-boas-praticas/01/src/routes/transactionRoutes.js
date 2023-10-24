@@ -5,7 +5,6 @@ const transactionController = require('../controllers/transactionController');
 const { validationMiddleware, validationMiddlewareParams } = require('../middlewares/validationMiddleware');
 const schemaTransactions = require('../validations/transactionSchema');
 const { schemaUserId } = require('../validations/userSchema');
-// const transactionMiddlewares = require('../middlewares/transactionMiddlewares');
 
 const transactionRouter = Router();
 
@@ -22,7 +21,7 @@ transactionRouter.get('/transacao/extrato',
 
 transactionRouter.get('/transacao/:id',
     authMiddleware.verifyLoggedUser,
-    validationMiddleware(schemaTransactions),
+    validationMiddlewareParams(schemaUserId),
     transactionController.getTransactionById
 );
 
@@ -35,7 +34,7 @@ transactionRouter.put('/transacao/:id',
 
 transactionRouter.post('/transacao',
     authMiddleware.verifyLoggedUser,
-    validationMiddlewareParams(schemaUserId),
+    validationMiddleware(schemaTransactions),
     transactionController.registerTransaction
 );
 

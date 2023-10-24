@@ -7,10 +7,10 @@ const schemaUsers = joi.object({
 });
 
 const schemaUserId = joi.object({
-    id: joi.number().required()
+    id: joi.number().integer().required()
 });
 
 module.exports = {
     schemaUsers,
     schemaUserId
-}
+};
