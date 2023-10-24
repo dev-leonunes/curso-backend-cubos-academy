@@ -8,7 +8,6 @@ const getAllCategoriesDatabase = async () => {
         return result.rows;
     }
     catch (error) {
-        console.log(error);
         return new Error("Erro na consulta de categorias");
     }
 };
@@ -23,7 +22,6 @@ const getCategoryByIdDatabase = async (id) => {
         const { rows } = await pool.query(query);
         return rows[0];
     } catch (error) {
-        console.log(error);
         return new Error('Erro na consulta da categoria.');
     }
 };

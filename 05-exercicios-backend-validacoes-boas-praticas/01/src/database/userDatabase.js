@@ -21,7 +21,6 @@ const userUpdateDatabase = async (nome, email, senha) => {
         await pool.query(query);
     }
     catch (error) {
-        console.log(error);
         return new Error('Erro na atualização do usuário.');
     }
 };
@@ -38,7 +37,6 @@ const findByEmail = async (email) => {
         return user.rows[0];
     }
     catch (error) {
-        console.log(error);
         return new Error('Erro na consulta por email.');
     }
 };
@@ -54,7 +52,6 @@ const findByID = async (id) => {
         return user;
     }
     catch (error) {
-        console.log(error);
         return new Error('Erro na consulta por ID.');
     }
 };
@@ -71,7 +68,6 @@ const existEmailDatabase = async (email, id) => {
         return user.rows[0];
     }
     catch (error) {
-        console.log(error);
         return new Error('Email já cadastrado em outra conta.');
     }
 };

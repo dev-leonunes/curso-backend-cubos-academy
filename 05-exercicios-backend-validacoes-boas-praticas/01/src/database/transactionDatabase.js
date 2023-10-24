@@ -24,7 +24,6 @@ const getAllTransactionsDatabase = async (userId) => {
         return rows;
     }
     catch (error) {
-        console.log(error);
         return new Error('Erro na consulta das transações.');
     }
 };
@@ -55,7 +54,6 @@ const getFilteredTransactionsDatabase = async (userId, filtro) => {
         return transactionsFilted.rows;
     }
     catch (error) {
-        console.log(error);
         return new Error('Erro na consulta das transações.');
     }
 };
@@ -70,7 +68,6 @@ const getTransactionByIdDatabase = async (id) => {
         const { rows } = await pool.query(query);
         return rows[0];
     } catch (error) {
-        console.log(error);
         return new Error('Erro na consulta da transação.');
     }
 };
@@ -85,7 +82,6 @@ const checkTransactionOwnershipForUserDatabase = async (transactionId, userId) =
         return rows;
     }
     catch (error) {
-        console.log(error);
         return new Error('Erro na consulta da transação.');
     }
 };
@@ -101,7 +97,6 @@ const updateTransactionDatabase = async (transactionId, descricao, valor, data, 
         return rows[0];
     }
     catch (error) {
-        console.log(error);
         return new Error('Erro ao atualizar transação.');
     }
 };
@@ -117,7 +112,6 @@ const registerTransactionDatabase = async (descricao, valor, data, categoria_id,
         const { rows } = await pool.query(query);
         return rows[0];
     } catch (error) {
-        console.log(error);
         return new Error('Erro ao cadastrar transação.');
     }
 };
@@ -145,7 +139,6 @@ const getExtractDatabase = async (userId) => {
         return extract;
     }
     catch (error) {
-        console.log(error);
         return new Error('Erro ao buscar extrato.');
     }
 };
@@ -159,7 +152,6 @@ const deleteTransactionDatabase = async (transactionId) => {
         await pool.query(query);
     }
     catch (error) {
-        console.log(error);
         return new Error('Erro ao deletar transação.');
     }
 };
