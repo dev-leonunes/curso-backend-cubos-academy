@@ -27,7 +27,6 @@ const createNewUser = async (req, res) => {
         return res.status(201).json(newUser);
 
     } catch (error) {
-        console.log(error);
         return res.status(500).json({ mensagem: "Erro interno do servidor!" });
     }
 };
@@ -46,7 +45,6 @@ const userUpdate = async (req, res) => {
         return res.status(200).json(userUpdated);
     }
     catch (error) {
-        console.log(error);
         return res.status(500).json({ "mensagem": "Erro ao atualizar usuário." });
     }
 };
@@ -63,7 +61,6 @@ const loggedUserDetails = async (req, res) => {
 
         return res.status(200).json(rows[0]);
     } catch (error) {
-        console.log(error);
         return res.status(500).json({ mensagem: "Erro interno do servidor." })
     }
 };

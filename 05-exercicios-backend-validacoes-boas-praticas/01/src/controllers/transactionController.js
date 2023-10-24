@@ -25,7 +25,6 @@ const getAllTransactions = async (req, res) => {
         return res.status(200).json(transactions);
     }
     catch (error) {
-        console.log(error);
         return res.status(500).json({ message: error.message });
     }
 };
@@ -47,7 +46,6 @@ const getTransactionById = async (req, res) => {
 
         return res.status(404).json({ mensagem: 'Transação não encontrada.' });
     } catch (error) {
-        console.log(error);
         return res.status(500).json({ mensagem: 'Erro interno de servidor' });
     }
 };
@@ -74,7 +72,6 @@ const updateTransaction = async (req, res) => {
         return res.status(200).json(transactionUpdated);
     }
     catch (error) {
-        console.log(error);
         return res.status(500).json({ message: error.message });
     }
 };
@@ -90,7 +87,6 @@ const getExtract = async (req, res) => {
         return res.status(200).json(extract);
     }
     catch (error) {
-        console.log(error);
         return res.status(500).json({ mensagem: 'Erro interno de servidor.' });
     }
 };
@@ -116,7 +112,6 @@ const deleteTransaction = async (req, res) => {
         return res.status(200).json(deletedTransaction);
     }
     catch (error) {
-        console.log(error);
         return res.status(500).json({ mensagem: 'Erro interno do servidor.' });
     }
 };
@@ -133,7 +128,6 @@ const registerTransaction = async (req, res) => {
         const newTransaction = await registerTransactionDatabase(descricao, valor, data, categoria_id, tipo, id);
         return res.status(201).json(newTransaction);
     } catch (error) {
-        console.log(error);
         return res.status(500).json({ mensagem: 'Erro interno do servidor' });
     }
 };
