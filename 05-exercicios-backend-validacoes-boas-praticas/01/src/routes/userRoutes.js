@@ -5,7 +5,7 @@ const authMiddleware = require('../middlewares/authMiddlewares');
 
 // const { validationCreateNewUser, validationUpdateUser } = require('../middlewares/userMiddlewares');
 const { validationMiddleware } = require('../middlewares/validationMiddleware');
-const schemaUsers = require('../validations/userSchema');
+const { schemaUsers } = require('../validations/userSchema');
 
 const userRouter = Router();
 

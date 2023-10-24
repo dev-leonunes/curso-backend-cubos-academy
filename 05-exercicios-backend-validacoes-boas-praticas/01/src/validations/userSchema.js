@@ -6,4 +6,11 @@ const schemaUsers = joi.object({
     senha: joi.string().min(4).required()
 });
 
-module.exports = schemaUsers;
+const schemaUserId = joi.object({
+    id: joi.number().required()
+});
+
+module.exports = {
+    schemaUsers,
+    schemaUserId
+}

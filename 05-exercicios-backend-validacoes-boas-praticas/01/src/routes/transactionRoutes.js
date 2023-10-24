@@ -1,8 +1,11 @@
 const { Router } = require('express');
 
-const authMiddleware = require('../middleware/authMiddlewares');
+const authMiddleware = require('../middlewares/authMiddlewares');
 const transactionController = require('../controllers/transactionController');
-const transactionMiddlewares = require('../middleware/transactionMiddlewares');
+const { validationMiddleware, validationMiddlewareParams } = require('../middlewares/validationMiddleware');
+const schemaTransactions = require('../validations/transactionSchema');
+const { schemaUserId } = require('../validations/userSchema');
+// const transactionMiddlewares = require('../middlewares/transactionMiddlewares');
 
 const transactionRouter = Router();
 
@@ -19,25 +22,26 @@ transactionRouter.get('/transacao/extrato',
 
 transactionRouter.get('/transacao/:id',
     authMiddleware.verifyLoggedUser,
-    transactionMiddlewares.validateGetTransaction,
+    validationMiddleware(schemaTransactions),
     transactionController.getTransactionById
 );
 
 transactionRouter.put('/transacao/:id',
     authMiddleware.verifyLoggedUser,
-    transactionMiddlewares.validateUpdateTransaction,
+    validationMiddlewareParams(schemaUserId),
+    validationMiddleware(schemaTransactions),
     transactionController.updateTransaction
 );
 
 transactionRouter.post('/transacao',
     authMiddleware.verifyLoggedUser,
-    transactionMiddlewares.validateCreateTransaction,
+    validationMiddlewareParams(schemaUserId),
     transactionController.registerTransaction
 );
 
 transactionRouter.delete('/transacao/:id',
     authMiddleware.verifyLoggedUser,
-    transactionMiddlewares.validateDeleteTransaction,
+    validationMiddlewareParams(schemaUserId),
     transactionController.deleteTransaction
 );
 
