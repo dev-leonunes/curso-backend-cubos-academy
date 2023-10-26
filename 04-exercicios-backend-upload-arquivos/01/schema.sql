@@ -19,5 +19,6 @@ create table produtos (
   	categoria text,
   	descricao text,
   	imagem text,
+	imagem_url text,
   	foreign key (usuario_id) references usuarios (id)
 );
