@@ -12,7 +12,7 @@ Durante o módulo 4 o foco do curso foi:
 - Testes com Jest;
 - Desenvolvimento de habilidades interpessoais e SoftSkills.<br><br>
 
-## Encontre o Desafio do Módulo 4 aqui >>> [sistema-pdv-API](https://github.com/futuroDevLeo/sistema-pdv-API)<br><br>
+## Encontre o Desafio do Módulo 4 aqui >>> [sistema-pdv-API](https://github.com/dev-leonunes/sistema-pdv-API)<br><br>
 
 ## Tecnológias e Ferramentas
 <img src="https://skillicons.dev/icons?i=js,nodejs,git,express,postgres" /> <img src="https://www.vectorlogo.zone/logos/npmjs/npmjs-tile.svg" alt="npm" width="45" height="45"/><br>

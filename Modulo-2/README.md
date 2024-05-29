@@ -9,7 +9,7 @@ Durante o módulo 2 o foco do curso foi:
 - Utilização de Git e Git Hub para controle de versão;
 - Desenvolvimento de habilidades interpessoais e SoftSkills.<br><br>
 
-## Encontre o Desafio do Módulo 2 aqui >>> [sistema-bancario-API](https://github.com/futuroDevLeo/sistema-bancario-API)<br><br>
+## Encontre o Desafio do Módulo 2 aqui >>> [sistema-bancario-API](https://github.com/dev-leonunes/sistema-bancario-API)<br><br>
 
 ## Tecnológias e Ferramentas
 <img src="https://skillicons.dev/icons?i=js,nodejs,git,express" /> <img src="https://www.vectorlogo.zone/logos/npmjs/npmjs-tile.svg" alt="npm" width="45" height="45"/><br>
